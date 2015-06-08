@@ -28,6 +28,7 @@
     var mScroll = {
                 _init: function() {
                     target.style.height = wrappers[0].offsetHeight + 'px';
+                    target.style.overflow = 'auto';
 
                     wrappers[0].style.transition = 'transform ' + duration + ' ' + easing;
                     wrappers[0].style.position = 'fixed';
