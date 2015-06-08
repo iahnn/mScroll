@@ -12,16 +12,16 @@
     var win = window
             , doc = document
             , target = doc.getElementsByTagName('body')[0]
-            , wrapper = target.childNodes
+            , children = target.childNodes
             , childTag = 'DIV'
             , easing = "ease-out" //css easing
             , duration = "1.2s" //duration ms(millisecond) or s(second)
             , top = 0
             , wrappers = [];
 
-    for(var i=0; i<wrapper.length; i++) {
-        if(wrapper[i].tagName == childTag) {
-            wrappers.push(wrapper[i]);
+    for(var i=0; i<children.length; i++) {
+        if(children[i].tagName == childTag) {
+            wrappers.push(children[i]);
         }
     }
 
