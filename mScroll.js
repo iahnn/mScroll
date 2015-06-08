@@ -27,19 +27,17 @@
 
     var mScroll = {
                 _init: function() {
-                    if( wrappers.length == 1 ) {
-                        target.style.height = wrappers[0].offsetHeight + 'px';
+                    target.style.height = wrappers[0].offsetHeight + 'px';
 
-                        wrappers[0].style.transition = 'transform ' + duration + ' ' + easing;
-                        wrappers[0].style.position = 'fixed';
-                        wrappers[0].style.top = '0';
-                        wrappers[0].style.left = '0';
-                        wrappers[0].style.width = '100%';
-                        wrappers[0].style.padding = '0';
-                        wrappers[0].style.zIndex = '2';
-                        wrappers[0].style.display = 'block';
-                        wrappers[0].style.backfaceVisibility = 'hidden';
-                    }
+                    wrappers[0].style.transition = 'transform ' + duration + ' ' + easing;
+                    wrappers[0].style.position = 'fixed';
+                    wrappers[0].style.top = '0';
+                    wrappers[0].style.left = '0';
+                    wrappers[0].style.width = '100%';
+                    wrappers[0].style.padding = '0';
+                    wrappers[0].style.zIndex = '2';
+                    wrappers[0].style.display = 'block';
+                    wrappers[0].style.backfaceVisibility = 'hidden';
                 },
                 _scroll: function() {
                     top = -(win.pageYOffset || doc.body.scrollTop);
@@ -47,7 +45,7 @@
                 }
             };
 
-    if (typeof window.ontouchstart == 'undefined') {
+    if (typeof window.ontouchstart == 'undefined' && wrappers.length == 1) {
         win.onload = function() {
             mScroll._init();
         };
