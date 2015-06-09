@@ -41,7 +41,7 @@
                     wrappers[0].style.backfaceVisibility = 'hidden';
                 },
                 _scroll: function() {
-                    top = -(win.pageYOffset || doc.body.scrollTop);
+                    top = -(win.pageYOffset || doc.documentElement.scrollTop);
                     wrappers[0].style.transform = 'translateY(' + top + 'px)';
                 }
             };
